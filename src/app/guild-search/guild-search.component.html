@@ -1,0 +1,10 @@
+<div class="container-fluid form-group form-inline">
+  <input placeholder="Guild" class="search-input form-control col-sm-3" [(ngModel)]="guildString">
+  <input placeholder="Realm" class="search-input form-control col-sm-3" [(ngModel)]="realmString">
+  <button class="btn btn-secondary col-sm-2" (click)="search(guildString, realmString)">Search!</button>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let user of arrayUsers | slice:0:10">{{user.name}}</li>
+  </ul>
+  </div>

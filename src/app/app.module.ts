@@ -13,7 +13,9 @@ import { NavigationBarComponent } from './header/navigation-bar/navigation-bar.c
 import { Vs2Component } from './vs2/vs2.component'
 import { Vs3Component } from './vs3/vs3.component'
 import { LeaderBoardService } from './leader-board.service';
-import { RbgComponent } from './rbg/rbg.component'
+import { RbgComponent } from './rbg/rbg.component';
+import { GuildSearchComponent } from './guild-search/guild-search.component'
+import { GuildSearchService } from './guild-search.service'
 
 
 
@@ -27,7 +29,8 @@ import { RbgComponent } from './rbg/rbg.component'
     NavigationBarComponent,
     Vs2Component,
     Vs3Component,
-    RbgComponent
+    RbgComponent,
+    GuildSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { RbgComponent } from './rbg/rbg.component'
     FormsModule,
     AppRoutingModule
   ],
-  providers: [LeaderBoardService],
+  providers: [LeaderBoardService, GuildSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
