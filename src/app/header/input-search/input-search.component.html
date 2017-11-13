@@ -1,4 +1,5 @@
 <div class="container-fluid form-group form-inline">
-  <input class="search-input form-control col-sm-10" [(ngModel)]="searchString" >
-  <button class="btn btn-secondary col-sm-2" (click)="search()">Search!</button>
+  <input placeholder="Character" class="search-input form-control col-sm-3" [(ngModel)]="charString">
+  <input placeholder="Realm" class="search-input form-control col-sm-3" [(ngModel)]="realmString">
+  <button class="btn btn-secondary col-sm-2" (click)="search(charString, realmString)">Search!</button>
 </div>
