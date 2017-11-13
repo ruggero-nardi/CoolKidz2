@@ -1,0 +1,8 @@
+<div>
+  <button class="btn btn-secondary col-sm-2" (click)="search()">Search!</button>
+</div>
+<div>
+<ul>
+  <li *ngFor="let user of arrayUsers | slice:0:10">{{user.name}}</li>
+</ul>
+</div>

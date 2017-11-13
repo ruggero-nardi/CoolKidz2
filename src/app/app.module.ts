@@ -10,6 +10,11 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
 import { InputSearchComponent } from './header/input-search/input-search.component';
 import { NavigationBarComponent } from './header/navigation-bar/navigation-bar.component';
+import { Vs2Component } from './vs2/vs2.component'
+import { Vs3Component } from './vs3/vs3.component'
+import { LeaderBoardService } from './leader-board.service';
+import { RbgComponent } from './rbg/rbg.component'
+
 
 
 @NgModule({
@@ -19,7 +24,10 @@ import { NavigationBarComponent } from './header/navigation-bar/navigation-bar.c
     MainContentComponent,
     FooterComponent,
     InputSearchComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    Vs2Component,
+    Vs3Component,
+    RbgComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,7 @@ import { NavigationBarComponent } from './header/navigation-bar/navigation-bar.c
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LeaderBoardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
