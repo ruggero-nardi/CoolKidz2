@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GuildInterfaceService } from './guild-interface.service';
+import { GuildSearchService } from './guild-search.service';
 
-describe('GuildInterfaceService', () => {
+describe('GuildSearchService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GuildInterfaceService]
+      providers: [GuildSearchService]
     });
   });
 
-  it('should be created', inject([GuildInterfaceService], (service: GuildInterfaceService) => {
+  it('should be created', inject([GuildSearchService], (service: GuildSearchService) => {
     expect(service).toBeTruthy();
   }));
 });

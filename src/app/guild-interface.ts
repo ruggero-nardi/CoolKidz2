@@ -1,9 +1,23 @@
 export interface GuildInterface {
+    "lastModified": number,
     "name": string,
     "realm": string,
     "battlegroup": string,
     "level": number,
-    "side":  number,
+    "side": number,
     "achievementPoints": number,
-    "members": [string],
+    "emblem": {
+        "icon": number;
+    }
+    "members": [{
+        "character": {
+            "name": string,
+            "realm": string,
+            "class": number,
+            "race": number,
+            "level": number,
+            "thumbnail": string
+        },
+    }]
 }
+
