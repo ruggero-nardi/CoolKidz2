@@ -4,7 +4,12 @@
   <button class="btn btn-secondary col-sm-2" (click)="search(guildString, realmString)">Search!</button>
 </div>
 <div>
-  <ul>
-    <li *ngFor="let user of arrayUsers | slice:0:10">{{guild.name}}-{{user.members}}</li>
+  <ul *ngIf="arrayUsers">
+    <li>{{arrayUsers.name}}</li>
   </ul>
+  </div>
+  <div>
+    <ul *ngIf="arrayMembers">
+<li *ngFor="let member of arrayMembers | slice:0:20" >{{member.character.name}}</li>
+    </ul>
   </div>
