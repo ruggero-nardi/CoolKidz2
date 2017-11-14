@@ -15,13 +15,8 @@ export class Vs3Component implements OnInit {
   constructor( private LeaderBoardService:LeaderBoardService) { }
 
   ngOnInit() {
-  }
-
-  search() {
     this.LeaderBoardService.getAll('3v3').subscribe(arrayUsers => {
       this.arrayUsers=arrayUsers;
-      console.log(arrayUsers);
     })
   }
-
 }

@@ -9,7 +9,6 @@ export class RealmStatusService {
 
   constructor(private http: Http) { }
   
-    arrayUsers: RealmInterface[];
     getAll(): Observable<RealmInterface[]> {
       return this.http.get(`https://us.api.battle.net/wow/realm/status?locale=en_US&apikey=4aq73rmdfp746j669j2u33qw434pbtj3`)
         .map((data) => {

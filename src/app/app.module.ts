@@ -17,7 +17,11 @@ import { RbgComponent } from './rbg/rbg.component';
 import { GuildSearchComponent } from './guild-search/guild-search.component'
 import { GuildSearchService } from './guild-search.service';
 import { RealmStatusComponent } from './realm-status/realm-status.component'
-import { RealmStatusService } from './realm-status.service'
+import { RealmStatusService } from './realm-status.service';
+import { PlayerDetailsComponent } from './player-details/player-details.component'
+import { PlayerSearchService } from './player-search.service';
+import { PlayerNotFoundComponent } from './player-not-found/player-not-found.component';
+import { AppService } from './app.service';
 
 
 
@@ -33,7 +37,9 @@ import { RealmStatusService } from './realm-status.service'
     Vs3Component,
     RbgComponent,
     GuildSearchComponent,
-    RealmStatusComponent
+    RealmStatusComponent,
+    PlayerDetailsComponent,
+    PlayerNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,7 @@ import { RealmStatusService } from './realm-status.service'
     FormsModule,
     AppRoutingModule
   ],
-  providers: [LeaderBoardService, GuildSearchService, RealmStatusService],
+  providers: [LeaderBoardService, GuildSearchService, RealmStatusService, PlayerSearchService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,13 +14,8 @@ export class RbgComponent implements OnInit {
   constructor( private LeaderBoardService:LeaderBoardService) { }
 
   ngOnInit() { 
-  }
- 
-  search() {
     this.LeaderBoardService.getAll('rbg').subscribe(arrayUsers => {
       this.arrayUsers=arrayUsers;
-      console.log(arrayUsers);
     })
   }
-
 }

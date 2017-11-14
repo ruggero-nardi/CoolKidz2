@@ -12,21 +12,19 @@ import { GuildMembers } from '../guild-members';
 })
 export class GuildSearchComponent implements OnInit {
 
-  
 
-  arrayUsers: GuildInterface;
+
+  guild: GuildInterface;
   arrayMembers: GuildMembers[];
-  constructor( private GuildSearchService:GuildSearchService) { }
+  constructor(private GuildSearchService: GuildSearchService) { }
 
   ngOnInit() {
   }
 
   search(guildString, realmString) {
-    this.GuildSearchService.getAll(guildString, realmString).subscribe(arrayUsers => {
-      this.arrayUsers=arrayUsers;
-      console.log(arrayUsers);
-      this.arrayMembers=arrayUsers.members;
-      console.log(this.arrayMembers);
+    this.GuildSearchService.getGuild(guildString, realmString).subscribe(guild => {
+      this.guild = guild;
+      this.arrayMembers = guild.members;
     })
   }
 

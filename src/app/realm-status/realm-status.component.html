@@ -3,6 +3,6 @@
 </div>
 <div>
 <ol class="list-group">
-  <li *ngFor="let user of arrayRealms" >{{user.name}}</li>
+  <li *ngFor="let realm of arrayRealms" [ngClass]="{'online': realm.status}" >{{realm.name}}</li>
 </ol>
 </div>

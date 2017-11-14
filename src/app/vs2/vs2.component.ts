@@ -15,13 +15,8 @@ export class Vs2Component implements OnInit {
   constructor( private LeaderBoardService:LeaderBoardService) { }
 
   ngOnInit() { 
-  }
- 
-  search() {
     this.LeaderBoardService.getAll('2v2').subscribe(arrayUsers => {
       this.arrayUsers=arrayUsers;
-      console.log(arrayUsers);
     })
   }
-
 }
