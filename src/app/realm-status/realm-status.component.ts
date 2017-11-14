@@ -11,16 +11,15 @@ import { RealmInterface } from '../realm-interface';
 })
 export class RealmStatusComponent implements OnInit {
 
-  arrayUsers: RealmInterface[];
-  constructor( private RealmStatusService:RealmStatusService) { }
+  arrayRealms: RealmInterface[];
+  constructor(private RealmStatusService: RealmStatusService) { }
 
   ngOnInit() {
   }
-  
+
   search() {
-    this.RealmStatusService.getAll().subscribe(arrayUsers => {
-      this.arrayUsers=arrayUsers;
-      console.log(arrayUsers);
+    this.RealmStatusService.getAll().subscribe(arrayRealms => {
+      this.arrayRealms = arrayRealms;
     })
   }
 }
